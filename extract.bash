@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# pre-requisites
+which hxselect > /dev/null || (echo "Error: missing 'hxselect'; brew install html-xml-utils" ; exit 1)
+which hxnormalize > /dev/null || (echo "Error: missing 'hxnormalize'; brew install html-xml-utils" ; exit 1)
+which asc2xml > /dev/null || (echo "Error: missing 'asc2xml'; brew install html-xml-utils" ; exit 1)
+
 sessionid=$1
 
 for market in Sverige Norge Danmark; do
